@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rack-test", ">= 0.6.0"
 
   spec.add_dependency "webmock", ">= 1.5.0"
-  spec.add_dependency "rack", ">= 1.0"
+  spec.add_dependency "rack", '~> 1.6.4'
 end
