@@ -9,6 +9,8 @@ RSpec.configure do |config|
   config.include WebMock::Server::API
   config.include Rack::Test::Methods
 
+  WebMock.enable!
+
   config.before :each do
     WebMock.allow_net_connect!
     WebMock.reset!
