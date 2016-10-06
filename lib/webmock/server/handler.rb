@@ -17,6 +17,8 @@ module WebMock
                                Net::HTTP::Post.new uri.to_s
                              when 'DELETE'
                                Net::HTTP::Delete.new uri.to_s
+                             when 'PUT'
+                               Net::HTTP::Put.new uri.to_s
                              when 'PATCH'
                                Net::HTTP::Patch.new uri.to_s
                              else
