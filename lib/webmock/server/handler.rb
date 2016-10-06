@@ -15,10 +15,12 @@ module WebMock
                                Net::HTTP::Get.new uri.to_s
                              when 'POST'
                                Net::HTTP::Post.new uri.to_s
+                             when 'DELETE'
+                               Net::HTTP::Delete.new uri.to_s
                              when 'PATCH'
                                Net::HTTP::Patch.new uri.to_s
                              else
-                               nil
+                               raise "unhandled http method: #{env['REQUEST_METHOD']}"
                            end
 
         clear_default_headers(internal_request)
